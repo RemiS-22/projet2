@@ -1,0 +1,114 @@
+<html><!------------>
+<head>
+	<title></title>
+	<!-- table de caractères FR avec accents et ç --><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><!-- lien vers la feuille de style -->
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<!------------>
+<body>
+<div class="centre">
+<p>Table des : <input id="n" size="2" /><button onclick="table_addi()" type="button">+</button><button onclick="table_mult()" type="button">*</button><button onclick="table_carre()" type="button">^2</button><button onclick="table_paires()" type="button">paire</button><button onclick="table_impaires()" type="button">impaires</button><button onclick="table_pairesetimpaires()" type="button">impaires et paires</button></p>
+
+<table>
+	<tbody>
+		<tr id="ligne">
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr id="ligne2">
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</body>
+<script>
+function table_addi()
+{
+	let n = parseInt(document.getElementById('n').value);
+	let contenu = ''; // déclaration à vide
+	for(let i=1; i<11 ; i=i+1)
+	{
+		let result = n + i ;
+		contenu = contenu + "<td>" + n + " + " + i + " = " + result + "</td>";
+
+	} 
+	document.getElementById('ligne').innerHTML = contenu;
+}// fin fonction
+
+function table_mult()
+{
+	let n = parseInt(document.getElementById('n').value);
+	let contenu = ''; // déclaration à vide
+	for(let i=1; i<11 ; i=i+1)
+	{
+		let result = n * i ;
+		contenu = contenu + "<td>" + n + " * " + i + " = " + result + "</td>";
+
+	} 
+	document.getElementById('ligne').innerHTML = contenu;
+}// fin fonction
+
+function table_carre()
+{
+	let n = parseInt(document.getElementById('n').value);
+	let contenu = ''; // déclaration à vide
+	for(let i=1; i<n ;i=i+1)
+	{
+		let result = i**2 ;
+		contenu = contenu + "<td>"+i+'^2' +'='+ result + "</td>";
+
+	} 
+	document.getElementById('ligne').innerHTML = contenu;
+}// fin fonction
+
+function table_paires()
+{
+	let n = parseInt(document.getElementById('n').value);
+	let contenu = '';
+	for(let i=0; i<11 ;i=i+2)
+	{
+		let result = i ;
+		contenu = contenu + "<td>" + i +"</td>";
+
+	} 
+	document.getElementById('ligne').innerHTML = contenu;
+}// fin fonction
+
+function table_impaires()
+{
+	let n = parseInt(document.getElementById('n').value);
+	let contenu = '';
+	for(let i=1; i<n ;i=i+2)
+	{
+		let result = i ;
+		contenu = contenu + "<td>" + i +"</td>";
+
+	} 
+	document.getElementById('ligne').innerHTML = contenu;
+}// fin fonction
+
+function table_pairesetimpaires()
+{
+	let n = parseInt(document.getElementById('n').value);
+	let contenu = '';
+	for(let i=0; i<n ;i=i+2)
+	{
+		let result = i ;
+		contenu = contenu + "<td>" + i +"</td>";
+
+	} 
+	document.getElementById('ligne').innerHTML = contenu;
+contenu='';
+	for(let i=1; i<n ;i=i+2)
+	{
+		contenu = contenu + "<td>" + i +"</td>";
+
+	} 
+	document.getElementById('ligne2').innerHTML = contenu;
+}// fin fonction
+</script>
+</html>

@@ -1,0 +1,25 @@
+div.centre { 
+margin: auto;
+width: 80%;
+text-align:center;
+}
+
+h1 {
+	border: 3px solid red;
+}
+
+table{
+	margin: auto;
+	border:3px solid blue;
+}
+
+td {
+font-family: verdana, sans-serif;
+font-size: 0.80em; /* 80% de la taille standard */
+border: 1px solid #6495ed;
+padding: 2px;
+width: 80px;
+text-align: center;
+vertical-align: middle; /*qui peut prendre les valeurs :  baseline | top | middle */
+background-color: #ffffff;
+}
